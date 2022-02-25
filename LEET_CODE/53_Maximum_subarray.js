@@ -1,14 +1,9 @@
 var maxSubArray = function (nums) {
-    let totalSum = 0
-    for (let i = 0; i < nums.length; i++) {
-        if (nums.length === 1) {
-            return nums[i]
-        }
-        // totalSum += nums[i]
-        if (totalSum < nums[i]) {
-            nums[i] = totalSum
-            console.log(totalSum, "totalsum")
-        }
+    let totalSum = nums[0]
+    for (let i = 1; i < nums.length; i++) {
+        //
+        nums[i] = Math.max(nums[i], nums[i] + nums[i - 1])
+        totalSum = Math.max(totalSum, nums[i])
     }
     return totalSum
 };
