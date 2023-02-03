@@ -18,4 +18,3 @@ console.log(maxSubArray([-2, 1, -3, 4, -1, 2, 1, -5, 4]))//6
 //Adds total sum of array
 // const sum = [-2, 1, -3, 4, -1, 2, 1, -5, 4].reduce((partialSum, a) => partialSum + a, 0);
 // console.log(sum); // 1
-
